@@ -11,19 +11,19 @@ import UIKit
 extension Date {
 
     // MARK: - Public
-    init(javascriptTimestamp:Double) {
+    public init(javascriptTimestamp:Double) {
         self.init(timeIntervalSince1970:javascriptTimestamp/1000)
     }
     
-    var javascriptTimestamp:NSNumber {
+    public var javascriptTimestamp:Double {
         return Date.javascriptTimestamp(fromDate: self)
     }
     
-    static func javascriptTimestampNow() -> NSNumber {
-        return NSNumber(value: round(Date().timeIntervalSince1970*1000) as Double)
+    public static func javascriptTimestampNow() -> Double {
+        return round(Date().timeIntervalSince1970*1000)
     }
     
-    static func javascriptTimestamp(fromDate date:Date) -> NSNumber {
-        return NSNumber(value: round(date.timeIntervalSince1970*1000) as Double)
+    public static func javascriptTimestamp(fromDate date:Date) -> Double {
+        return round(date.timeIntervalSince1970*1000)
     }
 }
