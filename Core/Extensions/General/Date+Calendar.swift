@@ -86,7 +86,7 @@ extension Date {
     }
     
     public var monthShortName:String {
-        return monthName(forLocale: Locale.current)
+        return monthShortName(forLocale: Locale.current)
     }
     
     public func monthShortName(forLocale locale: Locale) -> String {
@@ -116,7 +116,7 @@ extension Date {
         let lastDate = self.lastDateOfMonth
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day], from: firstDate, to: lastDate)
-        return components.day!
+        return components.day! + 1
     }
     
     public static func numberOfDays(inMonth month:Int, ofYear year:Int) -> Int {

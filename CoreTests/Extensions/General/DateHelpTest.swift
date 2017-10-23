@@ -66,4 +66,22 @@ class DateHelpTest: XCTestCase {
         let expectedMinutes = hours*60 + minutes
         XCTAssertTrue(hours == resultHours && expectedMinutes == resultMinutes)
     }
+    
+    func testAddDayMonthToDate() {
+        // Arrange
+        let inputDate = "2017-01-12 08:30:15"
+        let initialDate = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
+        let days = -4
+        let months = 2
+        
+        // Act
+        let monthDate = initialDate.date(byAddingMonths: months)
+        let dayDate = initialDate.date(byAddingDays: days)
+        
+        let resultMonths = initialDate.months(untilDate: monthDate)
+        let resultDays = dayDate.days(untilDate: initialDate)
+        
+        // Assert
+        XCTAssertTrue(resultMonths == months && resultDays == -days)
+    }
 }

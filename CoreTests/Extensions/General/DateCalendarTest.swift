@@ -20,23 +20,73 @@ class DateCalendarTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testCalendarNames() {
         // Arrange
-        let date = Date()
-        let locale = Locale(identifier: "es")
+        let inputDate = "2017-10-23 08:30:15"
+        let date = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
         
         // Act
+        let day = date.dayOrdinality
+        let weekDay = date.weekDayName
+        let month = date.monthName
+        let year = date.year
+        let fullDate = "\(weekDay), \(month) \(day) of \(year)"
         
-        let monthName = date.monthName
-        let esMonthName = date.monthName(forLocale: locale)
+        // Assert
+        XCTAssertTrue(fullDate == "Monday, October 23rd of 2017")
+    }
+    
+    func testCalendarShortNames() {
+        // Arrange
+        let inputDate = "2017-10-22 08:30:15"
+        let date = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
         
-        let weekDayName = date.weekDayShortName
-        let esweekDayName = date.weekDayShortName(forLocale: locale)
+        // Act
+        let day = date.dayOrdinality
+        let weekDay = date.weekDayShortName
+        let month = date.monthShortName
+        let fullDate = "\(weekDay), \(day) \(month)"
         
-        let date2 = Date(stringDate: "10/01/2017", format: "dd/MM/yyyy")
-        let days = date.days(untilDate: date2!)
-        XCTAssertNotNil(date)
+        // Assert
+        XCTAssertTrue(fullDate == "Sun, 22nd Oct")
+    }
+    
+    func testCalendarNumbers() {
+        // Arrange
+        let inputDate = "2017-10-21 08:30:15"
+        let date = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
         
+        // Act
+        let day = date.dayOrdinality
+        let weekDay = date.weekDay
+        let month = date.month
+        
+        // Assert
+        XCTAssertTrue(day == "21st" && weekDay == 7 && month == 10)
+    }
+    
+    func testDayOrdinal() {
+        // Arrange
+        let inputDate = "2017-10-12 08:30:15"
+        let date = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
+        
+        // Act
+        let day = date.dayOrdinality
+        
+        // Assert
+        XCTAssertTrue(day == "12th")
+    }
+    
+    func testDaysInMonth() {
+        // Arrange
+        let inputDate = "2017-01-12 08:30:15"
+        let date = Date(stringDate: inputDate, format: "yyyy-MM-dd HH:mm:ss")!
+        
+        // Act
+        let days = date.daysInMonth
+
+        // Assert
+        XCTAssertTrue(days == 31)
     }
     
     func testNumberOfDaysForMonthAtYear() {
