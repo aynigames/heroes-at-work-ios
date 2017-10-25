@@ -106,6 +106,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="E83-Ts-wxd" kind="show" id="DGa-6N-m7H"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-m4-W02" customClass="ABSRoundedBorderButton" customModule="HeroesAtWork" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="533" width="315" height="40"/>
@@ -122,7 +125,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="PiS-D5-Vu2">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="PiS-D5-Vu2" customClass="ABSTemplateImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                 <rect key="frame" x="116.5" y="10" width="141" height="141"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -158,7 +161,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2421830297" green="0.21860817069999999" blue="0.50142139200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18341755870000001" green="0.15994200110000001" blue="0.41821807620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rDe-8R-slW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8WS-7A-cEa"/>
                             <constraint firstItem="rDe-8R-slW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LoR-vW-ehw"/>
@@ -177,6 +180,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="jP0-Qg-rCn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="E83-Ts-wxd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taV-72-Qvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IEb-fN-2HJ">

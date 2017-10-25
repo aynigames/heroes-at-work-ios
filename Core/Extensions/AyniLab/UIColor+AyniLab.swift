@@ -11,100 +11,100 @@ import UIKit
 extension UIColor {
     
     // MARK: - General colors
-    class var primary:UIColor {
+    public class var primary:UIColor {
         return UIColor.aylPurple
     }
 
-    class var sucess:UIColor {
+    public class var sucess:UIColor {
         return UIColor.aylGreen
     }
 
-    class var error:UIColor {
+    public class var error:UIColor {
         return UIColor.aylRed
     }
 
-    class var warning:UIColor {
+    public class var warning:UIColor {
         return UIColor.aylYellow
     }
 
-    class var info:UIColor {
+    public class var info:UIColor {
         return UIColor.aylBlue
     }
     
-    class var background:UIColor {
+    public class var background:UIColor {
         return UIColor.aylDarkViolet
     }
     
-    class var toolBar:UIColor {
+    public class var toolBar:UIColor {
         return UIColor.aylViolet
     }
 
     // MARK: - Ayni Lab colors
-    class var aylDarkViolet:UIColor {
+    public class var aylDarkViolet:UIColor {
         return UIColor(hexString: "2F296B")
     }
     
-    class var aylViolet:UIColor {
+    public class var aylViolet:UIColor {
         return UIColor(hexString: "3E3880")
     }
     
-    class var aylDarkPurple:UIColor {
+    public class var aylDarkPurple:UIColor {
         return UIColor(hexString: "654DDB")
     }
     
-    class var aylPurple:UIColor {
+    public class var aylPurple:UIColor {
         return UIColor(hexString: "7659FF")
     }
     
-    class var aylLightPurple:UIColor {
+    public class var aylLightPurple:UIColor {
         return UIColor(hexString: "8970FF")
     }
     
-    class var aylDarkGreen:UIColor {
+    public class var aylDarkGreen:UIColor {
         return UIColor(hexString: "00BA66")
     }
     
-    class var aylGreen:UIColor {
+    public class var aylGreen:UIColor {
         return UIColor(hexString: "00D977")
     }
     
-    class var aylLightGreen:UIColor {
+    public class var aylLightGreen:UIColor {
         return UIColor(hexString: "01D9BA")
     }
     
-    class var aylDarkRed:UIColor {
+    public class var aylDarkRed:UIColor {
         return UIColor(hexString: "DB315B")
     }
     
-    class var aylRed:UIColor {
+    public class var aylRed:UIColor {
         return UIColor(hexString: "FF386A")
     }
     
-    class var aylLightRed:UIColor {
+    public class var aylLightRed:UIColor {
         return UIColor(hexString: "FF567F")
     }
     
-    class var aylDarkBlue:UIColor {
+    public class var aylDarkBlue:UIColor {
         return UIColor(hexString: "0189FF")
     }
     
-    class var aylBlue:UIColor {
+    public class var aylBlue:UIColor {
         return UIColor(hexString: "0088FF")
     }
     
-    class var aylLightBlue:UIColor {
+    public class var aylLightBlue:UIColor {
         return UIColor(hexString: "01B3FF")
     }
     
-    class var aylDarkYellow:UIColor {
+    public class var aylDarkYellow:UIColor {
         return UIColor(hexString: "DB8A01")
     }
     
-    class var aylYellow:UIColor {
+    public class var aylYellow:UIColor {
         return UIColor(hexString: "FFA502")
     }
     
-    class var aylLightYellow:UIColor {
+    public class var aylLightYellow:UIColor {
         return UIColor(hexString: "FFCA02")
     }
 }

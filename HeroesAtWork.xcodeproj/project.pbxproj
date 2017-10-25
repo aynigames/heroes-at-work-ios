@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2600CEEA0B5C90A9708AB8D5 /* Pods_HeroesAtWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9531DA322D97225AD971D9C /* Pods_HeroesAtWork.framework */; };
-		696DF95F1FA043A90086A583 /* UIColor+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */; };
+		690A91281FA0858400B2C402 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A1C0FE1F9DA3D000C21437 /* Core.framework */; };
+		690A91291FA0858400B2C402 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69A1C0FE1F9DA3D000C21437 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		690A91301FA0D15800B2C402 /* ABSTemplateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A912F1FA0D15800B2C402 /* ABSTemplateImageView.swift */; };
+		696DF9611FA046D70086A583 /* AppereanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DF9601FA046D70086A583 /* AppereanceManager.swift */; };
+		696DF9621FA082E80086A583 /* UIColor+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */; };
+		696DF9631FA082E90086A583 /* UIColor+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */; };
+		696DF9641FA082F60086A583 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D81F9C076200C21437 /* UIColor+Helper.swift */; };
 		6996FECC1F9DC19100B3C164 /* DateHelpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECB1F9DC19100B3C164 /* DateHelpTest.swift */; };
 		6996FED01F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECF1F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift */; };
 		6996FED31F9DC78400B3C164 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FED21F9DC78400B3C164 /* Date+Calendar.swift */; };
@@ -48,8 +54,6 @@
 		69A1C0F41F9C076200C21437 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0DC1F9C076200C21437 /* String+Validation.swift */; };
 		69A1C0F51F9C076200C21437 /* String+Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0DD1F9C076200C21437 /* String+Cast.swift */; };
 		69A1C1021F9DA3D100C21437 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 69A1C1001F9DA3D100C21437 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69A1C1051F9DA3D100C21437 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A1C0FE1F9DA3D000C21437 /* Core.framework */; };
-		69A1C1061F9DA3D100C21437 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69A1C0FE1F9DA3D000C21437 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69A1C1271F9DA64700C21437 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A1C0FE1F9DA3D000C21437 /* Core.framework */; };
 		69A1C1331F9DA98900C21437 /* Bundle+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C1321F9DA98900C21437 /* Bundle+Help.swift */; };
 		69A1C13D1F9DAAAD00C21437 /* DateFormatter+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C13A1F9DAAAD00C21437 /* DateFormatter+Helper.swift */; };
@@ -70,12 +74,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		69A1C1031F9DA3D100C21437 /* PBXContainerItemProxy */ = {
+		690A912A1FA0858500B2C402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69E157B71F9B923300531207 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 69A1C0FD1F9DA3D000C21437;
 			remoteInfo = Core;
+		};
+		6985223D1FA0848E007B414C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69E157B71F9B923300531207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69E157BE1F9B923300531207;
+			remoteInfo = HeroesAtWork;
 		};
 		69A1C1281F9DA64700C21437 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,13 +98,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		69E157E61F9B92D400531207 /* Embed Frameworks */ = {
+		690A912C1FA0858500B2C402 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				69A1C1061F9DA3D100C21437 /* Core.framework in Embed Frameworks */,
+				690A91291FA0858400B2C402 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +114,8 @@
 /* Begin PBXFileReference section */
 		0E04E2A26242B966A688AC01 /* Pods-HeroesAtWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroesAtWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroesAtWork/Pods-HeroesAtWork.debug.xcconfig"; sourceTree = "<group>"; };
 		2D1189D7C9800682F4D311F0 /* Pods-HeroesAtWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroesAtWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroesAtWork/Pods-HeroesAtWork.release.xcconfig"; sourceTree = "<group>"; };
+		690A912F1FA0D15800B2C402 /* ABSTemplateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSTemplateImageView.swift; sourceTree = "<group>"; };
+		696DF9601FA046D70086A583 /* AppereanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppereanceManager.swift; sourceTree = "<group>"; };
 		6996FECB1F9DC19100B3C164 /* DateHelpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpTest.swift; sourceTree = "<group>"; };
 		6996FECF1F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateJavascriptTimestampTest.swift; sourceTree = "<group>"; };
 		6996FED21F9DC78400B3C164 /* Date+Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calendar.swift"; sourceTree = "<group>"; };
@@ -181,7 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2600CEEA0B5C90A9708AB8D5 /* Pods_HeroesAtWork.framework in Frameworks */,
-				69A1C1051F9DA3D100C21437 /* Core.framework in Frameworks */,
+				690A91281FA0858400B2C402 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +207,21 @@
 				D9531DA322D97225AD971D9C /* Pods_HeroesAtWork.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		690A912D1FA08F3400B2C402 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		690A912E1FA0D11F00B2C402 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				690A912F1FA0D15800B2C402 /* ABSTemplateImageView.swift */,
+			);
+			path = ImageViews;
 			sourceTree = "<group>";
 		};
 		69A1C0FF1F9DA3D100C21437 /* Core */ = {
@@ -235,6 +263,7 @@
 		69A1C10C1F9DA3F900C21437 /* AyniLab */ = {
 			isa = PBXGroup;
 			children = (
+				69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */,
 			);
 			path = AyniLab;
 			sourceTree = "<group>";
@@ -305,7 +334,7 @@
 		69E157C11F9B923300531207 /* HeroesAtWork */ = {
 			isa = PBXGroup;
 			children = (
-				69E157F21F9B944700531207 /* Applicatoin Managers */,
+				69E157F21F9B944700531207 /* Application Managers */,
 				69E157F31F9B944700531207 /* Domain Managers */,
 				69E157F41F9B944700531207 /* Extensions */,
 				69E157F11F9B944700531207 /* Model */,
@@ -349,6 +378,7 @@
 		69E157ED1F9B944600531207 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				690A912D1FA08F3400B2C402 /* Base */,
 				69BF9F401FA035F600966D33 /* Authorization */,
 			);
 			path = ViewControllers;
@@ -358,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				69E158061F9B97C000531207 /* Buttons */,
+				690A912E1FA0D11F00B2C402 /* ImageViews */,
 				69E158031F9B96EF00531207 /* View */,
 			);
 			path = Views;
@@ -370,11 +401,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		69E157F21F9B944700531207 /* Applicatoin Managers */ = {
+		69E157F21F9B944700531207 /* Application Managers */ = {
 			isa = PBXGroup;
 			children = (
+				696DF9601FA046D70086A583 /* AppereanceManager.swift */,
 			);
-			path = "Applicatoin Managers";
+			path = "Application Managers";
 			sourceTree = "<group>";
 		};
 		69E157F31F9B944700531207 /* Domain Managers */ = {
@@ -477,7 +509,6 @@
 		69F2EAE21FA04159007AF0E4 /* AyniLab */ = {
 			isa = PBXGroup;
 			children = (
-				69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */,
 			);
 			path = AyniLab;
 			sourceTree = "<group>";
@@ -535,6 +566,7 @@
 			);
 			dependencies = (
 				69A1C1291F9DA64700C21437 /* PBXTargetDependency */,
+				6985223E1FA0848E007B414C /* PBXTargetDependency */,
 			);
 			name = CoreTests;
 			productName = CoreTests;
@@ -551,12 +583,12 @@
 				69E157BD1F9B923300531207 /* Resources */,
 				40AC11FC5AC097CCD3342C70 /* [CP] Embed Pods Frameworks */,
 				B5D8CC0ADF2D02FFFA9806B6 /* [CP] Copy Pods Resources */,
-				69E157E61F9B92D400531207 /* Embed Frameworks */,
+				690A912C1FA0858500B2C402 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				69A1C1041F9DA3D100C21437 /* PBXTargetDependency */,
+				690A912B1FA0858500B2C402 /* PBXTargetDependency */,
 			);
 			name = HeroesAtWork;
 			productName = HeroesAtWork;
@@ -582,6 +614,7 @@
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 69E157BE1F9B923300531207;
 					};
 					69E157BE1F9B923300531207 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -696,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696DF9621FA082E80086A583 /* UIColor+AyniLab.swift in Sources */,
 				69A1C13E1F9DAAAD00C21437 /* Date+Help.swift in Sources */,
 				6996FEE81F9EAC0E00B3C164 /* FileManager+Helper.swift in Sources */,
 				69A1C13F1F9DAAAD00C21437 /* Date+JavascriptTimestamp.swift in Sources */,
@@ -703,6 +737,7 @@
 				6996FED31F9DC78400B3C164 /* Date+Calendar.swift in Sources */,
 				69A1C1331F9DA98900C21437 /* Bundle+Help.swift in Sources */,
 				6996FEDA1F9DFB6700B3C164 /* TimeInterval+Help.swift in Sources */,
+				696DF9641FA082F60086A583 /* UIColor+Helper.swift in Sources */,
 				6996FED81F9DEF1000B3C164 /* Date+Time.swift in Sources */,
 				69A1C13D1F9DAAAD00C21437 /* DateFormatter+Helper.swift in Sources */,
 			);
@@ -724,7 +759,7 @@
 				6996FED51F9DC9E900B3C164 /* DateCalendarTest.swift in Sources */,
 				6996FEDC1F9DFE1D00B3C164 /* TimeIntervalHelpTest.swift in Sources */,
 				6996FEE11F9DFEA800B3C164 /* Date+JavascriptTimestamp.swift in Sources */,
-				696DF95F1FA043A90086A583 /* UIColor+AyniLab.swift in Sources */,
+				696DF9631FA082E90086A583 /* UIColor+AyniLab.swift in Sources */,
 				69A1C1421F9DAF9200C21437 /* DateFormatterHelpTest.swift in Sources */,
 				6996FEEC1F9EBC3000B3C164 /* NSError+Helper.swift in Sources */,
 				6996FEE61F9E398F00B3C164 /* DateTimeTest.swift in Sources */,
@@ -737,6 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696DF9611FA046D70086A583 /* AppereanceManager.swift in Sources */,
 				69A1C0E51F9C076200C21437 /* NumberFormatter+Help.swift in Sources */,
 				69A1C0E81F9C076200C21437 /* UIImage+Oritentation.swift in Sources */,
 				69A1C0F51F9C076200C21437 /* String+Cast.swift in Sources */,
@@ -745,6 +781,7 @@
 				69A1C0E91F9C076200C21437 /* UIViewController+Alert.swift in Sources */,
 				69A1C0F11F9C076200C21437 /* Double+Format.swift in Sources */,
 				69A1C0E71F9C076200C21437 /* UIImage+Color.swift in Sources */,
+				690A91301FA0D15800B2C402 /* ABSTemplateImageView.swift in Sources */,
 				69A1C0E11F9C076200C21437 /* UIVIew+Help.swift in Sources */,
 				69A1C0E21F9C076200C21437 /* UIWindow+Transition.swift in Sources */,
 				69A1C0E01F9C076200C21437 /* String+Size.swift in Sources */,
@@ -767,10 +804,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		69A1C1041F9DA3D100C21437 /* PBXTargetDependency */ = {
+		690A912B1FA0858500B2C402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 69A1C0FD1F9DA3D000C21437 /* Core */;
-			targetProxy = 69A1C1031F9DA3D100C21437 /* PBXContainerItemProxy */;
+			targetProxy = 690A912A1FA0858500B2C402 /* PBXContainerItemProxy */;
+		};
+		6985223E1FA0848E007B414C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69E157BE1F9B923300531207 /* HeroesAtWork */;
+			targetProxy = 6985223D1FA0848E007B414C /* PBXContainerItemProxy */;
 		};
 		69A1C1291F9DA64700C21437 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -794,7 +836,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pe.com.aynigames.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -821,7 +863,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pe.com.aynigames.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -849,6 +891,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroesAtWork.app/HeroesAtWork";
 			};
 			name = Debug;
 		};
@@ -867,6 +910,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroesAtWork.app/HeroesAtWork";
 			};
 			name = Release;
 		};
