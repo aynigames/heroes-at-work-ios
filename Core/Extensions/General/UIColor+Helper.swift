@@ -14,7 +14,7 @@ extension UIColor {
     // MARK: - Private
     fileprivate class func colorComponent(from str:String, start:Int, length:Int) -> CGFloat {
         let range = str.characters.index(str.startIndex, offsetBy: start)..<str.characters.index(str.startIndex, offsetBy: start+length)
-        let substring = str.substring(with: range)
+        let substring = String(str[range])
         let fullHex = length == 2 ? substring : "\(substring)\(substring)"
         var hexComponent:CUnsignedInt = 0
         Scanner(string: fullHex).scanHexInt32(&hexComponent)
@@ -22,31 +22,24 @@ extension UIColor {
     }
     
     // MARK: - Properties
-    var hexString: String? {
+    public var hexString: String? {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
-        
         let multiplier = CGFloat(255.999999)
-        
         guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
             return nil
         }
-        return String(
-            format: "#%02lX%02lX%02lX",
-            Int(red * multiplier),
-            Int(green * multiplier),
-            Int(blue * multiplier)
-        )
+        return String(format: "#%02lX%02lX%02lX", Int(red * multiplier), Int(green * multiplier),Int(blue * multiplier))
     }
     
     // MARK: - Lifecycle
-    convenience init(hexString:String) {
+    public convenience init(hexString:String) {
         self.init(hexString: hexString, alpha: -1)
     }
     
-    convenience init(hexString:String, alpha:CGFloat) {
+    public convenience init(hexString:String, alpha:CGFloat) {
         let colorString = hexString.replacingOccurrences(of: "#", with: "")
         var alphaColor, red, blue, green:CGFloat
         
@@ -88,11 +81,11 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alphaColor)
     }
     
-    convenience init(redIntColor:Int, greenIntColor:Int, blueIntColor:Int, alphaIntColor:CGFloat) {
+    public convenience init(redIntColor:Int, greenIntColor:Int, blueIntColor:Int, alphaIntColor:CGFloat) {
         self.init(red: CGFloat(redIntColor)/255.0, green: CGFloat(greenIntColor)/255.0, blue: CGFloat(blueIntColor)/255.0, alpha: alphaIntColor)
     }
     
-    // MARK: - Public
+    // MARK: - Public Methods
     public func blended(withFraction fraction: CGFloat, ofColor color: UIColor) -> UIColor {
         var r1: CGFloat = 1.0, g1: CGFloat = 1.0, b1: CGFloat = 1.0, a1: CGFloat = 1.0
         var r2: CGFloat = 1.0, g2: CGFloat = 1.0, b2: CGFloat = 1.0, a2: CGFloat = 1.0
