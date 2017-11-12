@@ -9,7 +9,8 @@ target 'HeroesAtWork' do
     #Presentation
     pod 'IQKeyboardManagerSwift', '~> 5.0'
     
-    #Infrastructure
+    #CoreData
+    pod 'MagicalRecord', '~> 2.3'
     
 end
 

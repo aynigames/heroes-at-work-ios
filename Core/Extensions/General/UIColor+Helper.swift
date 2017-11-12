@@ -13,7 +13,7 @@ extension UIColor {
     
     // MARK: - Private
     fileprivate class func colorComponent(from str:String, start:Int, length:Int) -> CGFloat {
-        let range = str.characters.index(str.startIndex, offsetBy: start)..<str.characters.index(str.startIndex, offsetBy: start+length)
+        let range = str.index(str.startIndex, offsetBy: start)..<str.index(str.startIndex, offsetBy: start+length)
         let substring = String(str[range])
         let fullHex = length == 2 ? substring : "\(substring)\(substring)"
         var hexComponent:CUnsignedInt = 0
@@ -43,7 +43,7 @@ extension UIColor {
         let colorString = hexString.replacingOccurrences(of: "#", with: "")
         var alphaColor, red, blue, green:CGFloat
         
-        switch(colorString.characters.count) {
+        switch(colorString.count) {
         case 3: // #RGB
             alphaColor = 1.0
             red   = UIColor.colorComponent(from: colorString, start: 0, length: 1)
