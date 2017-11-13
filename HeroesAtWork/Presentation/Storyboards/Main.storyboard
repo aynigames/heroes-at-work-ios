@@ -64,21 +64,21 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPQ-lf-vkc" customClass="ABSRoundedBorderView" customModule="HeroesAtWork" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="136"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZF-U1-IyA" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
+                                                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZF-U1-IyA" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                                         <rect key="frame" x="8" y="87.5" width="40" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="1mT-iz-VQf"/>
                                                                             <constraint firstAttribute="width" constant="40" id="HSp-Ig-Gfr"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-v7-t2K" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
+                                                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-v7-t2K" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                                         <rect key="frame" x="56" y="87.5" width="40" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="40" id="5ku-KR-eAl"/>
                                                                             <constraint firstAttribute="height" constant="40" id="CeE-Lg-x66"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLp-Ps-HMC" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
+                                                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLp-Ps-HMC" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                                         <rect key="frame" x="104" y="87.5" width="40" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="LXe-2E-dle"/>
@@ -103,7 +103,7 @@
                                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-T3-PoU" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
+                                                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N8q-T3-PoU" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                                         <rect key="frame" x="152" y="87.5" width="40" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="40" id="gPR-fb-dRz"/>
@@ -246,15 +246,16 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-zo-wb4" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-zo-wb4" customClass="ABSCircularImageView" customModule="HeroesAtWork" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="121" width="40" height="40"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="AgN-h7-H5T"/>
                                                                 <constraint firstAttribute="height" constant="40" id="dyK-9G-d9E"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DKD-bg-KNg">
-                                                            <rect key="frame" x="56" y="149" width="279" height="10"/>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DKD-bg-KNg">
+                                                            <rect key="frame" x="56" y="149" width="279" height="11"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="10" id="zzg-0X-lhf"/>
                                                             </constraints>

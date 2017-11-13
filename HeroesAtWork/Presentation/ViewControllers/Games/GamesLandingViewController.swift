@@ -20,7 +20,6 @@ final class GamesLandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     
     // MARK: - Private
@@ -32,6 +31,7 @@ final class GamesLandingViewController: UIViewController {
             let identifier = ActiveGameCollectionCell.identifier
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ActiveGameCollectionCell
             cell.game = game
+            cell.delegate = self
             return cell
         }
         activeGamesCollectionView.dataSource = activeGamesDataSource
@@ -41,6 +41,7 @@ final class GamesLandingViewController: UIViewController {
             let identifier = GameHistoryCell.identifier
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameHistoryCell
             cell.game = game
+            cell.delegate = self
             return cell
         }
         gamesTableView.dataSource = historyGamesDataSource
@@ -50,3 +51,24 @@ final class GamesLandingViewController: UIViewController {
     
 }
 
+extension GamesLandingViewController: ActiveGameCollectionCellDelegate {
+    
+    func activeGameCollectionCell(_ sender: ActiveGameCollectionCell, didSelectHero hero: Hero) {
+        // TODO: navigate to hero
+        print(hero)
+    }
+    
+    func activeGameCollectionCell(_ sender: ActiveGameCollectionCell, didNavigateToGame game: Game) {
+        // Navigate to game
+    }
+    
+}
+
+extension GamesLandingViewController: GameHistoryCellDelegate {
+    
+    func gameHistoryCell(_ sender: GameHistoryCell, didSelectHero hero: Hero) {
+        // TODO: navigate to hero
+        print(hero)
+    }
+    
+}

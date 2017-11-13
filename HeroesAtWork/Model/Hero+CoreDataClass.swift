@@ -14,6 +14,10 @@ import CoreData
 public class Hero: NSManagedObject {
 
     // MARK: - Properties
+    public override var description: String {
+        return fullName
+    }
+    
     var imageURL:URL? {
         if let url = imageUrlString {
             return URL(string: url)

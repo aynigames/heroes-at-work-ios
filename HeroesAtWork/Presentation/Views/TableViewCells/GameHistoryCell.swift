@@ -9,6 +9,12 @@
 import UIKit
 import Core
 
+protocol GameHistoryCellDelegate: NSObjectProtocol {
+    
+    func gameHistoryCell(_ sender:GameHistoryCell, didSelectHero hero:Hero)
+    
+}
+
 final class GameHistoryCell: UITableViewCell {
  
     // MARK: - Constant
@@ -25,6 +31,7 @@ final class GameHistoryCell: UITableViewCell {
     @IBOutlet weak var mainHeroPoints: UILabel!
     @IBOutlet weak var mainHeroProgressView: UIProgressView!
     @IBOutlet weak var heroesCollectionView: UICollectionView!
+    weak var delegate:GameHistoryCellDelegate?
     var heroDataSource:HeroDataSource!
     var game:Game! {
         didSet {
@@ -32,7 +39,7 @@ final class GameHistoryCell: UITableViewCell {
         }
     }
     
-    // MARK: - Constructor
+    // MARK: - Lifecycle
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCell()
@@ -43,8 +50,15 @@ final class GameHistoryCell: UITableViewCell {
         setupCell()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mainHeroImageViewTapped(_:)))
+        mainHeroImageView.addGestureRecognizer(tapGesture)
+    }
+    
     // MARK: - Private
     private func setupCell() {
+        // Set Datasource
         heroDataSource = HeroDataSource()
         heroDataSource.heroeCollectionCellCreator = { (collectionView, hero, indexPath) in
             let identifier = HeroImageCollectionCell.identifier
@@ -52,6 +66,11 @@ final class GameHistoryCell: UITableViewCell {
             cell.hero = hero
             return cell
         }
+        
+        // Set select background
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor.clear
+        self.selectedBackgroundView = bgColorView
     }
     
     private func setupInformation() {
@@ -80,6 +99,7 @@ final class GameHistoryCell: UITableViewCell {
         heroesCollectionView.reloadData()
     }
     
+    // MARK: - Override
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         containerView.backgroundColor = UIColor.white
@@ -90,10 +110,18 @@ final class GameHistoryCell: UITableViewCell {
         containerView.backgroundColor = UIColor.white
     }
     
+    // MARK: - Action
+    @IBAction func mainHeroImageViewTapped(_ sender: UITapGestureRecognizer) {
+        delegate?.gameHistoryCell(self, didSelectHero: game.mainHero!)
+    }
+    
 }
 
 extension GameHistoryCell: UICollectionViewDelegate {
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let hero = heroDataSource.heroes[indexPath.row]
+        delegate?.gameHistoryCell(self, didSelectHero: hero)
+    }
     
 }
