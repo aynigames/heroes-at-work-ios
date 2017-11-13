@@ -2,7 +2,7 @@
 //  Tag+CoreDataProperties.swift
 //  HeroesAtWork
 //
-//  Created by Arturo Gamarra on 11/11/17.
+//  Created by Arturo Gamarra on 11/12/17.
 //  Copyright © 2017 AyniGames. All rights reserved.
 //
 //
@@ -17,10 +17,10 @@ extension Tag {
         return NSFetchRequest<Tag>(entityName: "Tag")
     }
 
-    @NSManaged public var tagId: String?
     @NSManaged public var name: String?
-    @NSManaged public var heroeTag: HeroeTag?
+    @NSManaged public var tagId: String?
     @NSManaged public var games: NSSet?
+    @NSManaged public var heroTag: HeroTag?
 
 }
 

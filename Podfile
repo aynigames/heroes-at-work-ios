@@ -12,6 +12,10 @@ target 'HeroesAtWork' do
     #CoreData
     pod 'MagicalRecord', '~> 2.3'
     
+    #Service
+    pod 'Alamofire'
+    pod 'AlamofireImage'
+    
 end
 
 # Disable Code Coverage for Pods projects

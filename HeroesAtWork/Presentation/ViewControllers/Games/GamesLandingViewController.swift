@@ -38,13 +38,14 @@ final class GamesLandingViewController: UIViewController {
         
         historyGamesDataSource = GameDateSource(games: oldGames)
         historyGamesDataSource.gameTableCellCreator = { (tableView, game, indexPath) in
-//            let identifier = ActiveGameCollectionCell.identifier
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ActiveGameCollectionCell
-//            cell.game = game
-//            return cell
-            return UITableViewCell()
+            let identifier = GameHistoryCell.identifier
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameHistoryCell
+            cell.game = game
+            return cell
         }
         gamesTableView.dataSource = historyGamesDataSource
+        gamesTableView.rowHeight = UITableViewAutomaticDimension
+        gamesTableView.estimatedRowHeight = 260
     }
     
 }

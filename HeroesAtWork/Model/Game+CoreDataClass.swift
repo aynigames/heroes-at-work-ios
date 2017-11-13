@@ -24,6 +24,18 @@ public class Game: NSManagedObject {
         return days >= 0 ? days : 0
     }
     
+    public var sortedHeroes:[Hero] {
+        guard var allHeroes = heroes?.allObjects as? [Hero] else {
+            return []
+        }
+        allHeroes = allHeroes.sorted( by: { $0.points > $1.points })
+        return allHeroes
+    }
+    
+    public var mainHero:Hero? {
+        return sortedHeroes.first
+    }
+    
     public class var activeGames:[Game] {
         let predicate = NSPredicate(format: "endDate >= %@", Date.today as NSDate)
         guard let games = Game.mr_findAllSorted(by: "endDate", ascending: false, with: predicate) as? [Game] else {

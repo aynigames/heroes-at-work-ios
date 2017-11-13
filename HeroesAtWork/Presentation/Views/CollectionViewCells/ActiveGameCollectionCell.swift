@@ -21,8 +21,16 @@ final class ActiveGameCollectionCell: UICollectionViewCell {
     var game:Game! {
         didSet {
             gameNameLabel.text = game.name
-            remainingDaysLabel.text = "Remaining days \(game.remainingDays)"
-            // TODO: - set hero
+            remainingDaysLabel.text = "Finishes in \(game.remainingDays) days"
+            
+            let heroes = game.sortedHeroes
+            let showDots = heroes.count > heroesImageViews.count
+            let count = showDots ? heroesImageViews.count-1 : heroes.count
+            for i in 0..<count {
+                if let url = heroes[i].imageURL {
+                    heroesImageViews[i].af_setImage(withURL: url)
+                }
+            }
         }
     }
     

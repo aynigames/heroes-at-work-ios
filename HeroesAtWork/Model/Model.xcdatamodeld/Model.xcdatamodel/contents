@@ -6,36 +6,39 @@
         <attribute name="initialDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pointsPerHero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="heroes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heroe" inverseName="games" inverseEntity="Heroe" syncable="YES"/>
+        <relationship name="gameMaster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hero" inverseName="cretedGames" inverseEntity="Hero" syncable="YES"/>
+        <relationship name="heroes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hero" inverseName="games" inverseEntity="Hero" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="games" inverseEntity="Tag" syncable="YES"/>
     </entity>
-    <entity name="Heroe" representedClassName="Heroe" syncable="YES">
+    <entity name="Hero" representedClassName="Hero" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heroeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heroId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrlString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pointsGiven" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pointsToGive" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cretedGames" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="gameMaster" inverseEntity="Game" syncable="YES"/>
         <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="heroes" inverseEntity="Game" syncable="YES"/>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HeroeTag" inverseName="heroes" inverseEntity="HeroeTag" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HeroTag" inverseName="heroes" inverseEntity="HeroTag" syncable="YES"/>
     </entity>
-    <entity name="HeroeTag" representedClassName="HeroeTag" syncable="YES">
+    <entity name="HeroTag" representedClassName="HeroTag" syncable="YES">
         <attribute name="points" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="heroes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Heroe" inverseName="tags" inverseEntity="Heroe" syncable="YES"/>
-        <relationship name="tag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="heroeTag" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="heroes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hero" inverseName="tags" inverseEntity="Hero" syncable="YES"/>
+        <relationship name="tag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="heroTag" inverseEntity="Tag" syncable="YES"/>
     </entity>
     <entity name="Notification" representedClassName="Notification" syncable="YES"/>
     <entity name="Tag" representedClassName="Tag" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tagId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="tags" inverseEntity="Game" syncable="YES"/>
-        <relationship name="heroeTag" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeroeTag" inverseName="tag" inverseEntity="HeroeTag" syncable="YES"/>
+        <relationship name="heroTag" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeroTag" inverseName="tag" inverseEntity="HeroTag" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="-225" positionY="-29" width="128" height="148"/>
-        <element name="Heroe" positionX="-38" positionY="-37" width="128" height="163"/>
-        <element name="Tag" positionX="-36" positionY="153" width="128" height="103"/>
-        <element name="HeroeTag" positionX="144" positionY="83" width="128" height="88"/>
+        <element name="Game" positionX="-225" positionY="-29" width="128" height="163"/>
+        <element name="Hero" positionX="-38" positionY="-63" width="128" height="193"/>
+        <element name="HeroTag" positionX="144" positionY="83" width="128" height="90"/>
         <element name="Notification" positionX="223" positionY="-63" width="128" height="43"/>
+        <element name="Tag" positionX="-36" positionY="153" width="128" height="103"/>
     </elements>
 </model>

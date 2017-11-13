@@ -2,7 +2,7 @@
 //  Game+CoreDataProperties.swift
 //  HeroesAtWork
 //
-//  Created by Arturo Gamarra on 11/11/17.
+//  Created by Arturo Gamarra on 11/12/17.
 //  Copyright © 2017 AyniGames. All rights reserved.
 //
 //
@@ -17,11 +17,12 @@ extension Game {
         return NSFetchRequest<Game>(entityName: "Game")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var gameId: String?
+    @NSManaged public var endDate: Date
+    @NSManaged public var gameId: String
+    @NSManaged public var initialDate: Date
+    @NSManaged public var name: String
     @NSManaged public var pointsPerHero: Int32
-    @NSManaged public var initialDate: NSDate?
-    @NSManaged public var endDate: NSDate?
+    @NSManaged public var gameMaster: Hero?
     @NSManaged public var heroes: NSSet?
     @NSManaged public var tags: NSSet?
 
@@ -30,17 +31,35 @@ extension Game {
 // MARK: Generated accessors for heroes
 extension Game {
 
+    @objc(insertObject:inHeroesAtIndex:)
+    @NSManaged public func insertIntoHeroes(_ value: Hero, at idx: Int)
+
+    @objc(removeObjectFromHeroesAtIndex:)
+    @NSManaged public func removeFromHeroes(at idx: Int)
+
+    @objc(insertHeroes:atIndexes:)
+    @NSManaged public func insertIntoHeroes(_ values: [Hero], at indexes: NSIndexSet)
+
+    @objc(removeHeroesAtIndexes:)
+    @NSManaged public func removeFromHeroes(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInHeroesAtIndex:withObject:)
+    @NSManaged public func replaceHeroes(at idx: Int, with value: Hero)
+
+    @objc(replaceHeroesAtIndexes:withHeroes:)
+    @NSManaged public func replaceHeroes(at indexes: NSIndexSet, with values: [Hero])
+
     @objc(addHeroesObject:)
-    @NSManaged public func addToHeroes(_ value: Heroe)
+    @NSManaged public func addToHeroes(_ value: Hero)
 
     @objc(removeHeroesObject:)
-    @NSManaged public func removeFromHeroes(_ value: Heroe)
+    @NSManaged public func removeFromHeroes(_ value: Hero)
 
     @objc(addHeroes:)
-    @NSManaged public func addToHeroes(_ values: NSSet)
+    @NSManaged public func addToHeroes(_ values: NSOrderedSet)
 
     @objc(removeHeroes:)
-    @NSManaged public func removeFromHeroes(_ values: NSSet)
+    @NSManaged public func removeFromHeroes(_ values: NSOrderedSet)
 
 }
 
