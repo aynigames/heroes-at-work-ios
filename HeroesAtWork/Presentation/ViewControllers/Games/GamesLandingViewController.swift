@@ -8,13 +8,11 @@
 
 import UIKit
 
-final class GamesLandingViewController: UIViewController {
+final class GamesLandingViewController: BaseViewController {
 
     // MARK: - Properties
-    @IBOutlet weak var activeGamesCollectionView: UICollectionView!
-    @IBOutlet weak var gamesTableView: UITableView!
-    var activeGamesDataSource:GameDateSource!
-    var historyGamesDataSource:GameDateSource!
+    @IBOutlet weak var tableView: UITableView!
+    var historyGames:[Game] = []
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -22,57 +20,76 @@ final class GamesLandingViewController: UIViewController {
         setupView()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if (gamesTableView.shouldUpdateHeaderViewFrame) {
-            gamesTableView.beginUpdates()
-            gamesTableView.endUpdates()
-        }
-    }
-    
     // MARK: - Private
     private func setupView() {
-        gamesTableView.configureHeaderView()
+        historyGames = Game.finishedGames
         
-        let activeGames = Game.activeGames
-        let oldGames = Game.finishedGames
-        activeGamesDataSource = GameDateSource(games: activeGames)
-        activeGamesDataSource.gameCollectionCellCreator = { (collectionView, game, indexPath) in
-            let identifier = ActiveGameCollectionCell.identifier
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ActiveGameCollectionCell
-            cell.game = game
-            cell.delegate = self
-            return cell
-        }
-        activeGamesCollectionView.dataSource = activeGamesDataSource
-        if let layout = activeGamesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.minimumInteritemSpacing = 10
-        }
-        
-        historyGamesDataSource = GameDateSource(games: oldGames)
-        historyGamesDataSource.gameTableCellCreator = { (tableView, game, indexPath) in
-            let identifier = GameHistoryCell.identifier
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameHistoryCell
-            cell.game = game
-            cell.delegate = self
-            return cell
-        }
-        gamesTableView.dataSource = historyGamesDataSource
-        gamesTableView.rowHeight = UITableViewAutomaticDimension
-        gamesTableView.estimatedRowHeight = 260
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 260
     }
     
 }
 
-extension GamesLandingViewController: ActiveGameCollectionCellDelegate {
+extension GamesLandingViewController: UITableViewDataSource {
     
-    func activeGameCollectionCell(_ sender: ActiveGameCollectionCell, didSelectHero hero: Hero) {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (section == 0) {
+            return 1
+        }
+        return historyGames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath.section == 0) {
+            let identifier = GameActiveCell.identifier
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameActiveCell
+            cell.games = Game.activeGames
+            cell.delegate = self
+            return cell
+            
+        } else {
+            let identifier = GameHistoryCell.identifier
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! GameHistoryCell
+            cell.game = historyGames[indexPath.item]
+            cell.delegate = self
+            return cell
+        }
+    }
+}
+
+extension GamesLandingViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if (section == 0) {
+            return NSLocalizedString("games_landing_in_progress", comment: "In Progress")
+        } else {
+            return NSLocalizedString("games_landing_history", comment: "History")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.section != 0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("GO TO GAME")
+    }
+}
+
+extension GamesLandingViewController: GameActiveCellProtocol {
+    
+    func gameActiveCell(_ sender:GameActiveCell, didSelectHero hero:Hero) {
         // TODO: navigate to hero
         print(hero)
     }
     
-    func activeGameCollectionCell(_ sender: ActiveGameCollectionCell, didNavigateToGame game: Game) {
+    func gameActiveCell(_ sender:GameActiveCell, didNavigateToGame game:Game) {
         // Navigate to game
+        print("GO TO GAME")
     }
     
 }

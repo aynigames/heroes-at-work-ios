@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  HeroesAtWork
+
+  Created by Arturo Gamarra on 11/20/17.
+  Copyright © 2017 AyniGames. All rights reserved.
+*/
+
+// Games Landing
+"games_landing_in_progress" =   "In Progress";
+"games_landing_history"     =   "History";

@@ -32,7 +32,7 @@ extension UIColor {
     }
     
     public class var background:UIColor {
-        return UIColor.aylDarkViolet
+        return UIColor.aylLightGray
     }
     
     public class var toolBar:UIColor {
@@ -106,5 +106,9 @@ extension UIColor {
     
     public class var aylLightYellow:UIColor {
         return UIColor(hexString: "FFCA02")
+    }
+    
+    public class var aylLightGray:UIColor {
+        return UIColor(hexString: "E6E6E6")
     }
 }
