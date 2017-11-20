@@ -20,6 +20,8 @@ final class HeroImageCollectionCell: UICollectionViewCell {
         didSet {
             if let url = hero.imageURL {
                 imageView.af_setImage(withURL: url)
+            } else {
+                imageView.image = hero.image
             }
         }
     }

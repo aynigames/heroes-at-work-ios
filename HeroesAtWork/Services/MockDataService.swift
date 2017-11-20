@@ -65,7 +65,6 @@ public struct MockDataService {
         heroe3.pointsToGive = 100
         heroe3.points = 40
         heroe3.pointsGiven = 60
-        heroe3.imageUrlString = "https://pbs.twimg.com/profile_images/734133345722961920/tGeWEfYN.jpg"
         heroe3.addToTags(heroTag3)
         
         let game = Game.mr_createEntity(in: context)!
@@ -79,6 +78,18 @@ public struct MockDataService {
         game.addToHeroes(hero1)
         game.addToHeroes(hero2)
         game.addToHeroes(heroe3)
+        
+        let game3 = Game.mr_createEntity(in: context)!
+        game3.name = "hero1"
+        game3.gameId = UUID().uuidString
+        game3.pointsPerHero = 100
+        game3.initialDate = Date(stringDate: "10/11/2017", format: "dd/MM/yyyy")!
+        game3.endDate = Date(stringDate: "20/11/2017", format: "dd/MM/yyyy")!
+        game3.addToTags(tag1)
+        game3.addToTags(tag2)
+        game3.addToHeroes(hero1)
+        game3.addToHeroes(hero2)
+        game3.addToHeroes(heroe3)
         
         let game2 = Game.mr_createEntity(in: context)!
         game2.name = "Heroe2"

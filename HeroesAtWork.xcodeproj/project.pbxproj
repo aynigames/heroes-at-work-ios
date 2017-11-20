@@ -13,6 +13,12 @@
 		690A91301FA0D15800B2C402 /* ABSTemplateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A912F1FA0D15800B2C402 /* ABSTemplateImageView.swift */; };
 		691031261FB88D6D0024A725 /* ActiveGameCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691031251FB88D6D0024A725 /* ActiveGameCollectionCell.swift */; };
 		691031281FB88E7D0024A725 /* ABSCircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691031271FB88E7D0024A725 /* ABSCircularImageView.swift */; };
+		693BDC031FC1EEFB00079DA2 /* UIImage+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC021FC1EEFB00079DA2 /* UIImage+String.swift */; };
+		693BDC061FC25AF900079DA2 /* String+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC051FC25AF900079DA2 /* String+Name.swift */; };
+		693BDC081FC25D7800079DA2 /* StringNameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC071FC25D7800079DA2 /* StringNameTest.swift */; };
+		693BDC091FC25DBB00079DA2 /* String+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC051FC25AF900079DA2 /* String+Name.swift */; };
+		693BDC0B1FC25EFE00079DA2 /* UIImage+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC0A1FC25EFE00079DA2 /* UIImage+AyniLab.swift */; };
+		693BDC0D1FC2659900079DA2 /* UITableView+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BDC0C1FC2659900079DA2 /* UITableView+Help.swift */; };
 		696DF9611FA046D70086A583 /* AppereanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DF9601FA046D70086A583 /* AppereanceManager.swift */; };
 		696DF9621FA082E80086A583 /* UIColor+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */; };
 		696DF9631FA082E90086A583 /* UIColor+AyniLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */; };
@@ -28,6 +34,7 @@
 		6987C69F1FB7E12400A98201 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C69E1FB7E12400A98201 /* MockDataService.swift */; };
 		6987C6A41FB8440B00A98201 /* GameDateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C6A31FB8440B00A98201 /* GameDateSource.swift */; };
 		6987C6A61FB8826700A98201 /* GamesLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C6A51FB8826700A98201 /* GamesLandingViewController.swift */; };
+		69946C5C1FBB1DE300C2CBA5 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CF1F9C076100C21437 /* UIImage+Color.swift */; };
 		6996FECC1F9DC19100B3C164 /* DateHelpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECB1F9DC19100B3C164 /* DateHelpTest.swift */; };
 		6996FED01F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECF1F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift */; };
 		6996FED31F9DC78400B3C164 /* Date+Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FED21F9DC78400B3C164 /* Date+Calendar.swift */; };
@@ -57,13 +64,11 @@
 		69A1C0E31F9C076200C21437 /* UIViewController+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CB1F9C076100C21437 /* UIViewController+Help.swift */; };
 		69A1C0E51F9C076200C21437 /* NumberFormatter+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CD1F9C076100C21437 /* NumberFormatter+Help.swift */; };
 		69A1C0E61F9C076200C21437 /* CALayer+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CE1F9C076100C21437 /* CALayer+Animation.swift */; };
-		69A1C0E71F9C076200C21437 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CF1F9C076100C21437 /* UIImage+Color.swift */; };
 		69A1C0E81F9C076200C21437 /* UIImage+Oritentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D01F9C076100C21437 /* UIImage+Oritentation.swift */; };
 		69A1C0E91F9C076200C21437 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D11F9C076100C21437 /* UIViewController+Alert.swift */; };
 		69A1C0EB1F9C076200C21437 /* NSNumber+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D31F9C076100C21437 /* NSNumber+Helper.swift */; };
 		69A1C0EC1F9C076200C21437 /* NSObject+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D41F9C076100C21437 /* NSObject+Image.swift */; };
 		69A1C0EE1F9C076200C21437 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D61F9C076100C21437 /* String+Regex.swift */; };
-		69A1C0EF1F9C076200C21437 /* String+Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D71F9C076100C21437 /* String+Html.swift */; };
 		69A1C0F11F9C076200C21437 /* Double+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0D91F9C076200C21437 /* Double+Format.swift */; };
 		69A1C0F21F9C076200C21437 /* UINavigationController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0DA1F9C076200C21437 /* UINavigationController+Navigation.swift */; };
 		69A1C0F31F9C076200C21437 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0DB1F9C076200C21437 /* UIView+Nib.swift */; };
@@ -137,6 +142,11 @@
 		690A912F1FA0D15800B2C402 /* ABSTemplateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSTemplateImageView.swift; sourceTree = "<group>"; };
 		691031251FB88D6D0024A725 /* ActiveGameCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameCollectionCell.swift; sourceTree = "<group>"; };
 		691031271FB88E7D0024A725 /* ABSCircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSCircularImageView.swift; sourceTree = "<group>"; };
+		693BDC021FC1EEFB00079DA2 /* UIImage+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+String.swift"; sourceTree = "<group>"; };
+		693BDC051FC25AF900079DA2 /* String+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Name.swift"; sourceTree = "<group>"; };
+		693BDC071FC25D7800079DA2 /* StringNameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringNameTest.swift; sourceTree = "<group>"; };
+		693BDC0A1FC25EFE00079DA2 /* UIImage+AyniLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AyniLab.swift"; sourceTree = "<group>"; };
+		693BDC0C1FC2659900079DA2 /* UITableView+Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Help.swift"; sourceTree = "<group>"; };
 		696DF9601FA046D70086A583 /* AppereanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppereanceManager.swift; sourceTree = "<group>"; };
 		6987C6761FB7BE4100A98201 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6987C68C1FB7CC4D00A98201 /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -177,7 +187,6 @@
 		69A1C0D31F9C076100C21437 /* NSNumber+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Helper.swift"; sourceTree = "<group>"; };
 		69A1C0D41F9C076100C21437 /* NSObject+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Image.swift"; sourceTree = "<group>"; };
 		69A1C0D61F9C076100C21437 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
-		69A1C0D71F9C076100C21437 /* String+Html.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Html.swift"; sourceTree = "<group>"; };
 		69A1C0D81F9C076200C21437 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
 		69A1C0D91F9C076200C21437 /* Double+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Format.swift"; sourceTree = "<group>"; };
 		69A1C0DA1F9C076200C21437 /* UINavigationController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Navigation.swift"; sourceTree = "<group>"; };
@@ -333,6 +342,9 @@
 				69A1C0C71F9C076000C21437 /* NSError+Helper.swift */,
 				6996FED91F9DFB6700B3C164 /* TimeInterval+Help.swift */,
 				69A1C0D81F9C076200C21437 /* UIColor+Helper.swift */,
+				69A1C0CF1F9C076100C21437 /* UIImage+Color.swift */,
+				693BDC021FC1EEFB00079DA2 /* UIImage+String.swift */,
+				693BDC051FC25AF900079DA2 /* String+Name.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				69A1C0F71F9C078100C21437 /* UIColor+AyniLab.swift */,
+				693BDC0A1FC25EFE00079DA2 /* UIImage+AyniLab.swift */,
 			);
 			path = AyniLab;
 			sourceTree = "<group>";
@@ -374,6 +387,7 @@
 				6996FEEE1F9EBD2F00B3C164 /* FileManagerHelpTest.swift */,
 				6996FEE91F9EBC0200B3C164 /* NSErrorHelpTest.swift */,
 				6996FEDB1F9DFE1D00B3C164 /* TimeIntervalHelpTest.swift */,
+				693BDC071FC25D7800079DA2 /* StringNameTest.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -527,13 +541,12 @@
 				69A1C0D41F9C076100C21437 /* NSObject+Image.swift */,
 				69A1C0CD1F9C076100C21437 /* NumberFormatter+Help.swift */,
 				69A1C0DD1F9C076200C21437 /* String+Cast.swift */,
-				69A1C0D71F9C076100C21437 /* String+Html.swift */,
 				69A1C0D61F9C076100C21437 /* String+Regex.swift */,
 				69A1C0C81F9C076000C21437 /* String+Size.swift */,
 				69A1C0DC1F9C076200C21437 /* String+Validation.swift */,
-				69A1C0CF1F9C076100C21437 /* UIImage+Color.swift */,
 				69A1C0D01F9C076100C21437 /* UIImage+Oritentation.swift */,
 				69A1C0DA1F9C076200C21437 /* UINavigationController+Navigation.swift */,
+				693BDC0C1FC2659900079DA2 /* UITableView+Help.swift */,
 				69A1C0C91F9C076000C21437 /* UIVIew+Help.swift */,
 				69A1C0DB1F9C076200C21437 /* UIView+Nib.swift */,
 				69A1C0D11F9C076100C21437 /* UIViewController+Alert.swift */,
@@ -830,14 +843,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				696DF9621FA082E80086A583 /* UIColor+AyniLab.swift in Sources */,
+				693BDC061FC25AF900079DA2 /* String+Name.swift in Sources */,
+				693BDC0B1FC25EFE00079DA2 /* UIImage+AyniLab.swift in Sources */,
 				69A1C13E1F9DAAAD00C21437 /* Date+Help.swift in Sources */,
 				6996FEE81F9EAC0E00B3C164 /* FileManager+Helper.swift in Sources */,
 				69A1C13F1F9DAAAD00C21437 /* Date+JavascriptTimestamp.swift in Sources */,
 				6996FEEB1F9EBC2E00B3C164 /* NSError+Helper.swift in Sources */,
+				69946C5C1FBB1DE300C2CBA5 /* UIImage+Color.swift in Sources */,
 				6996FED31F9DC78400B3C164 /* Date+Calendar.swift in Sources */,
 				69A1C1331F9DA98900C21437 /* Bundle+Help.swift in Sources */,
 				6996FEDA1F9DFB6700B3C164 /* TimeInterval+Help.swift in Sources */,
 				696DF9641FA082F60086A583 /* UIColor+Helper.swift in Sources */,
+				693BDC031FC1EEFB00079DA2 /* UIImage+String.swift in Sources */,
 				6996FED81F9DEF1000B3C164 /* Date+Time.swift in Sources */,
 				69A1C13D1F9DAAAD00C21437 /* DateFormatter+Helper.swift in Sources */,
 			);
@@ -850,6 +867,7 @@
 				6996FED01F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift in Sources */,
 				6996FEE41F9DFEA800B3C164 /* TimeInterval+Help.swift in Sources */,
 				6996FEE21F9DFEA800B3C164 /* Date+Time.swift in Sources */,
+				693BDC091FC25DBB00079DA2 /* String+Name.swift in Sources */,
 				6996FEDF1F9DFEA800B3C164 /* Date+Calendar.swift in Sources */,
 				6996FEED1F9EBC3F00B3C164 /* FileManager+Helper.swift in Sources */,
 				6996FEE01F9DFEA800B3C164 /* Date+Help.swift in Sources */,
@@ -859,6 +877,7 @@
 				6996FED51F9DC9E900B3C164 /* DateCalendarTest.swift in Sources */,
 				6996FEDC1F9DFE1D00B3C164 /* TimeIntervalHelpTest.swift in Sources */,
 				6996FEE11F9DFEA800B3C164 /* Date+JavascriptTimestamp.swift in Sources */,
+				693BDC081FC25D7800079DA2 /* StringNameTest.swift in Sources */,
 				696DF9631FA082E90086A583 /* UIColor+AyniLab.swift in Sources */,
 				69A1C1421F9DAF9200C21437 /* DateFormatterHelpTest.swift in Sources */,
 				6996FEEC1F9EBC3000B3C164 /* NSError+Helper.swift in Sources */,
@@ -887,7 +906,6 @@
 				6996FF3E1FB8B48D002F1157 /* TabBarViewController.swift in Sources */,
 				69A1C0F11F9C076200C21437 /* Double+Format.swift in Sources */,
 				69F5A23E1FB946E800A4BA66 /* HeroTag+CoreDataProperties.swift in Sources */,
-				69A1C0E71F9C076200C21437 /* UIImage+Color.swift in Sources */,
 				69F5A23C1FB946E800A4BA66 /* Hero+CoreDataProperties.swift in Sources */,
 				6987C6A61FB8826700A98201 /* GamesLandingViewController.swift in Sources */,
 				690A91301FA0D15800B2C402 /* ABSTemplateImageView.swift in Sources */,
@@ -902,10 +920,10 @@
 				69E1580D1F9B97C000531207 /* ABSRoundedBorderButton.swift in Sources */,
 				69E158051F9B971400531207 /* ABSRoundedBorderView.swift in Sources */,
 				6987C69B1FB7CC4D00A98201 /* Notification+CoreDataProperties.swift in Sources */,
+				693BDC0D1FC2659900079DA2 /* UITableView+Help.swift in Sources */,
 				699AAB4F1FB89A2B00F4EB24 /* GameHistoryCell.swift in Sources */,
 				69E1580C1F9B97C000531207 /* ABSCircularButton.swift in Sources */,
 				69A1C0EC1F9C076200C21437 /* NSObject+Image.swift in Sources */,
-				69A1C0EF1F9C076200C21437 /* String+Html.swift in Sources */,
 				69A1C0EB1F9C076200C21437 /* NSNumber+Helper.swift in Sources */,
 				69E157FD1F9B944700531207 /* AppDelegate.swift in Sources */,
 				6996FF401FB8B9EE002F1157 /* HeroImageCollectionCell.swift in Sources */,

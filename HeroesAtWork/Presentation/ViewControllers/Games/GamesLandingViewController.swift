@@ -22,8 +22,18 @@ final class GamesLandingViewController: UIViewController {
         setupView()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if (gamesTableView.shouldUpdateHeaderViewFrame) {
+            gamesTableView.beginUpdates()
+            gamesTableView.endUpdates()
+        }
+    }
+    
     // MARK: - Private
     private func setupView() {
+        gamesTableView.configureHeaderView()
+        
         let activeGames = Game.activeGames
         let oldGames = Game.finishedGames
         activeGamesDataSource = GameDateSource(games: activeGames)
@@ -35,6 +45,9 @@ final class GamesLandingViewController: UIViewController {
             return cell
         }
         activeGamesCollectionView.dataSource = activeGamesDataSource
+        if let layout = activeGamesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.minimumInteritemSpacing = 10
+        }
         
         historyGamesDataSource = GameDateSource(games: oldGames)
         historyGamesDataSource.gameTableCellCreator = { (tableView, game, indexPath) in

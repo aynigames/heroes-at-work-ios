@@ -10,6 +10,8 @@ import UIKit
 import MagicalRecord
 import IQKeyboardManagerSwift
 
+import Core
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

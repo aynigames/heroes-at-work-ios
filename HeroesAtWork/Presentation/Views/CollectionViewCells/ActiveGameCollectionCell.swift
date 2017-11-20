@@ -38,6 +38,8 @@ final class ActiveGameCollectionCell: UICollectionViewCell {
             for i in 0..<count {
                 if let url = heroes[i].imageURL {
                     heroesImageViews[i].af_setImage(withURL: url)
+                } else {
+                    heroesImageViews[i].image = heroes[i].image
                 }
             }
         }

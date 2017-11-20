@@ -90,6 +90,8 @@ final class GameHistoryCell: UITableViewCell {
         mainHeroProgressView.progress = Float(mainHero!.points)/Float(playedPoints)
         if let url = mainHero?.imageURL {
             mainHeroImageView.af_setImage(withURL: url)
+        } else {
+            mainHeroImageView.image = mainHero?.image
         }
         
         // Set heroes collection
