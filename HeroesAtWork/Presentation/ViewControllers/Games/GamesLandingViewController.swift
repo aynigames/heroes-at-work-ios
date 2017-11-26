@@ -24,12 +24,17 @@ final class GamesLandingViewController: BaseViewController {
     private func setupView() {
         historyGames = Game.finishedGames
         
+        let headerView = UINib(nibName: "BasicTableHaderView", bundle: Bundle.main)
+        tableView.register(headerView, forHeaderFooterViewReuseIdentifier: BasicTableHaderView.identifier)
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedSectionHeaderHeight = 50
         tableView.estimatedRowHeight = 260
     }
     
 }
 
+// MARK: - UITableViewDataSource
 extension GamesLandingViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,14 +66,19 @@ extension GamesLandingViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension GamesLandingViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (section == 0) {
-            return NSLocalizedString("games_landing_in_progress", comment: "In Progress")
-        } else {
-            return NSLocalizedString("games_landing_history", comment: "History")
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: BasicTableHaderView.identifier) as? BasicTableHaderView else {
+            return nil
         }
+        if (section == 0) {
+            headerView.titleLabel.text = NSLocalizedString("games_landing_in_progress", comment: "In Progress")
+        } else {
+            headerView.titleLabel.text = NSLocalizedString("games_landing_history", comment: "History")
+        }
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -80,6 +90,7 @@ extension GamesLandingViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - GameActiveCellProtocol
 extension GamesLandingViewController: GameActiveCellProtocol {
     
     func gameActiveCell(_ sender:GameActiveCell, didSelectHero hero:Hero) {
@@ -94,6 +105,7 @@ extension GamesLandingViewController: GameActiveCellProtocol {
     
 }
 
+// MARK: - GameHistoryCellDelegate
 extension GamesLandingViewController: GameHistoryCellDelegate {
     
     func gameHistoryCell(_ sender: GameHistoryCell, didSelectHero hero: Hero) {

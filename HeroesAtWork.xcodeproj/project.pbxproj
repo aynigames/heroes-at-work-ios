@@ -38,6 +38,8 @@
 		6987C69F1FB7E12400A98201 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C69E1FB7E12400A98201 /* MockDataService.swift */; };
 		6987C6A41FB8440B00A98201 /* GameDateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C6A31FB8440B00A98201 /* GameDateSource.swift */; };
 		6987C6A61FB8826700A98201 /* GamesLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987C6A51FB8826700A98201 /* GamesLandingViewController.swift */; };
+		6988DF2D1FCB4845002ECF98 /* BasicTableHaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988DF2C1FCB4845002ECF98 /* BasicTableHaderView.swift */; };
+		6988DF301FCB4874002ECF98 /* BasicTableHaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6988DF2F1FCB4874002ECF98 /* BasicTableHaderView.xib */; };
 		69946C5C1FBB1DE300C2CBA5 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1C0CF1F9C076100C21437 /* UIImage+Color.swift */; };
 		6996FECC1F9DC19100B3C164 /* DateHelpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECB1F9DC19100B3C164 /* DateHelpTest.swift */; };
 		6996FED01F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996FECF1F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift */; };
@@ -168,6 +170,8 @@
 		6987C6A01FB7E14D00A98201 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6987C6A31FB8440B00A98201 /* GameDateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateSource.swift; sourceTree = "<group>"; };
 		6987C6A51FB8826700A98201 /* GamesLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesLandingViewController.swift; sourceTree = "<group>"; };
+		6988DF2C1FCB4845002ECF98 /* BasicTableHaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableHaderView.swift; sourceTree = "<group>"; };
+		6988DF2F1FCB4874002ECF98 /* BasicTableHaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableHaderView.xib; sourceTree = "<group>"; };
 		6996FECB1F9DC19100B3C164 /* DateHelpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpTest.swift; sourceTree = "<group>"; };
 		6996FECF1F9DC5FF00B3C164 /* DateJavascriptTimestampTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateJavascriptTimestampTest.swift; sourceTree = "<group>"; };
 		6996FED21F9DC78400B3C164 /* Date+Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Calendar.swift"; sourceTree = "<group>"; };
@@ -319,6 +323,15 @@
 				6987C6A31FB8440B00A98201 /* GameDateSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		6988DF2E1FCB484A002ECF98 /* TableHeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				6988DF2C1FCB4845002ECF98 /* BasicTableHaderView.swift */,
+				6988DF2F1FCB4874002ECF98 /* BasicTableHaderView.xib */,
+			);
+			path = TableHeaderViews;
 			sourceTree = "<group>";
 		};
 		69A1C0FF1F9DA3D100C21437 /* Core */ = {
@@ -495,6 +508,7 @@
 				69E158061F9B97C000531207 /* Buttons */,
 				691031241FB88D360024A725 /* CollectionViewCells */,
 				690A912E1FA0D11F00B2C402 /* ImageViews */,
+				6988DF2E1FCB484A002ECF98 /* TableHeaderViews */,
 				691031231FB88D220024A725 /* TableViewCells */,
 				69E158031F9B96EF00531207 /* View */,
 			);
@@ -785,6 +799,7 @@
 				69E157FE1F9B944700531207 /* Assets.xcassets in Resources */,
 				69E157FB1F9B944700531207 /* Authorization.storyboard in Resources */,
 				69E158021F9B94EE00531207 /* Main.storyboard in Resources */,
+				6988DF301FCB4874002ECF98 /* BasicTableHaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +929,7 @@
 				6987C6771FB7BE4100A98201 /* Model.xcdatamodeld in Sources */,
 				6987C6A41FB8440B00A98201 /* GameDateSource.swift in Sources */,
 				69E1580F1F9B97C000531207 /* ABSUnderLineButton.swift in Sources */,
+				6988DF2D1FCB4845002ECF98 /* BasicTableHaderView.swift in Sources */,
 				69A1C0E91F9C076200C21437 /* UIViewController+Alert.swift in Sources */,
 				6987C6991FB7CC4D00A98201 /* Tag+CoreDataProperties.swift in Sources */,
 				69F5A23B1FB946E800A4BA66 /* Hero+CoreDataClass.swift in Sources */,
