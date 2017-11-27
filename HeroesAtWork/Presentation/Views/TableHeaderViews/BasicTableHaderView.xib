@@ -20,8 +20,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ4-Hq-IIu">
-                            <rect key="frame" x="16" y="0.0" width="343" height="50"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <rect key="frame" x="16" y="8" width="343" height="38"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -29,8 +29,8 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="dJ4-Hq-IIu" secondAttribute="trailing" constant="16" id="9Li-Rq-dPv"/>
-                        <constraint firstItem="dJ4-Hq-IIu" firstAttribute="top" secondItem="Wwd-ij-0GC" secondAttribute="top" id="ZfM-6I-X9w"/>
-                        <constraint firstAttribute="bottom" secondItem="dJ4-Hq-IIu" secondAttribute="bottom" id="eiW-4i-Xfi"/>
+                        <constraint firstItem="dJ4-Hq-IIu" firstAttribute="top" secondItem="Wwd-ij-0GC" secondAttribute="top" constant="8" id="ZfM-6I-X9w"/>
+                        <constraint firstAttribute="bottom" secondItem="dJ4-Hq-IIu" secondAttribute="bottom" constant="4" id="eiW-4i-Xfi"/>
                         <constraint firstItem="dJ4-Hq-IIu" firstAttribute="leading" secondItem="Wwd-ij-0GC" secondAttribute="leading" constant="16" id="yrb-Os-HRn"/>
                     </constraints>
                 </view>

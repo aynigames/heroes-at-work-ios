@@ -6,6 +6,9 @@
   Copyright © 2017 AyniGames. All rights reserved.
 */
 
-// Games Landing
+// Games Landing ViewController
 "games_landing_in_progress" =   "In Progress";
 "games_landing_history"     =   "History";
+
+// Create Game ViewController
+"create_game_heroes_title"  =   "Heroes";

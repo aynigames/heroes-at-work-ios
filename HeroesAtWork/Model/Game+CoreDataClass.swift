@@ -13,6 +13,12 @@ import Core
 
 @objc(Game)
 public class Game: NSManagedObject {
+    
+    // MARK: - Enum
+    enum PointsLimits:Int {
+        case max = 500
+        case min = 0
+    }
 
     // MARK: - Public
     public var remainingDays:Int {
