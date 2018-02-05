@@ -9,10 +9,15 @@
 import UIKit
 import Core
 import MagicalRecord
+import AlignedCollectionViewFlowLayout
 
 final class CreateGameViewController: BaseViewController {
 
-    // MARK: -  Properties
+    // MARK: - Constants
+    private let tagCollectionDefaultHeight:CGFloat = 44.0
+    
+    
+    // MARK: - Properties
     private lazy var context:NSManagedObjectContext = NSManagedObjectContext.mr_rootSaving()
     private lazy var heroes:[Hero] = []
     private lazy var tags:[String] = []
@@ -70,8 +75,11 @@ final class CreateGameViewController: BaseViewController {
         minPointsLabel.text = Game.PointsLimits.min.rawValue.description
         maxPointsLabel.text = Game.PointsLimits.max.rawValue.description
         
-        if let layout = tagCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+        tagCollectionView.isHidden = true
+        if let layout = tagCollectionView.collectionViewLayout as? AlignedCollectionViewFlowLayout {
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+            layout.horizontalAlignment = .left
+            layout.verticalAlignment = .top
         }
     }
     
@@ -114,12 +122,20 @@ final class CreateGameViewController: BaseViewController {
         endDateLabel.text = endDatePicker.date.string(fromTemplate: "ddMMyyyy")
     }
     
+    @IBAction func endEditing() {
+        view.endEditing(true)
+        startDatePicker.isHidden = true
+        endDatePicker.isHidden = true
+    }
+    
     @IBAction func pointsSliderValueChanged(_ sender: UISlider) {
         let points = pointsSlider.value * Float(Game.PointsLimits.max.rawValue)
         pointsToPlayLabel.text = Int(points).description
     }
     
     @IBAction func addTagButtonTapped(_ sender: UIButton) {
+        tagCollectionView.isHidden = false
+        
         let atags = ["arturo", "seb", "gamarra", "mejia", "Compromiso", "calidad"]
         let index = Int(arc4random_uniform(UInt32(atags.count)))
         let aTag = atags[index]
@@ -128,7 +144,10 @@ final class CreateGameViewController: BaseViewController {
         view.setNeedsLayout()
         view.layoutIfNeeded()
         
-        tagCollectionViewHeightConstraint.constant = tagCollectionView.collectionViewLayout.collectionViewContentSize.height
+        let newHeight = tagCollectionView.collectionViewLayout.collectionViewContentSize.height
+        if newHeight > tagCollectionDefaultHeight {
+            tagCollectionViewHeightConstraint.constant = newHeight
+        }
         view.setNeedsLayout()
         view.layoutIfNeeded()
     }

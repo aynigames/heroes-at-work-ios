@@ -71,8 +71,8 @@ public struct MockDataService {
         game.name = "hero1"
         game.gameId = UUID().uuidString
         game.pointsPerHero = 100
-        game.initialDate = Date(stringDate: "10/10/2017", format: "dd/MM/yyyy")!
-        game.endDate = Date(stringDate: "20/10/2017", format: "dd/MM/yyyy")!
+        game.initialDate = Date(stringDate: "01/01/2018", format: "dd/MM/yyyy")!
+        game.endDate = Date(stringDate: "01/06/2018", format: "dd/MM/yyyy")!
         game.addToTags(tag1)
         game.addToTags(tag2)
         game.addToHeroes(hero1)

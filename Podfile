@@ -8,6 +8,7 @@ target 'HeroesAtWork' do
     
     #Presentation
     pod 'IQKeyboardManagerSwift', '~> 5.0'
+    pod 'AlignedCollectionViewFlowLayout'
     
     #CoreData
     pod 'MagicalRecord', '~> 2.3'
